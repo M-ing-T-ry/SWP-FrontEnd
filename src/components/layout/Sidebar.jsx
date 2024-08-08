@@ -1,9 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import { AdminLinks } from "@/constants/index";
+import { EventOperatorLinks, AdminLinks } from "@/constants/index";
 
 function Sidebar() {
   const location = useLocation();
-  let LinkRouter = AdminLinks;
+  let LinkRouter = location.pathname.startsWith("/admin")
+    ? AdminLinks
+    : EventOperatorLinks;
 
   return (
     <div className="h-screen bg-white md:w-72">

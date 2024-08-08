@@ -14,4 +14,10 @@ export const Routers = {
       route: "/admin/events",
     },
   },
+  eventOperator: {
+    events: {
+      label: "Events",
+      route: "/event-operator/events",
+    },
+  },
 };
